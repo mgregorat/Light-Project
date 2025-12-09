@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lights!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html,body{margin:0;padding:20px;background:#0a0f18;color:#eee;font-family:sans-serif}
+    #canvas{width:800px;height:600px;display:block;border:2px solid #333}
+    #controls { margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.5); color: white; border-radius: 5px; font-family: sans-serif; max-width: 800px; }
+    #controls div { margin-bottom: 5px; }
+    #hud { margin-top: 8px; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <div id="controls">
+    <div>
+      <input type="checkbox" id="dirToggle" checked>
+      <label for="dirToggle">Directional Lights</label>
+    </div>
+    <div>
+      <input type="checkbox" id="pointToggle" checked>
+      <label for="pointToggle">Point Lights</label>
+    </div>
+    <div>
+      <input type="checkbox" id="spotToggle" checked>
+      <label for="spotToggle">Spotlights</label>
+    </div>
+    <div>
+      <label for="lightingModel">Lighting Model</label>
+      <select id="lightingModel">
+        <option value="0">Phong</option>
+        <option value="1">Blinn-Phong</option>
+        <option value="2">PBR</option>
+      </select>
+    </div>
+    <div id="hud"></div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
